@@ -2,7 +2,7 @@
 
 Simple Docker-based development environment for the Metasploit Framework project.
 
-I have created it as I want to run it on macos, but haven't really found alternatives, maybe this repo someday will receive 1 star from someone, dunno xD. Or maybe there are some limitations I am not aware of yet, who knows 
+> Note from author: I have created it as I want to run metasploit dev env on macos, but haven't really found alternatives, maybe this repo someday will receive 1 star from someone, dunno xD. However, maybe there are some limitations I am not aware of yet, who knows 
 
 ## Prerequisites
 
