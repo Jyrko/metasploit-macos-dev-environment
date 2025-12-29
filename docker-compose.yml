@@ -1,0 +1,25 @@
+services:
+  metasploit-framework:
+    build:
+      context: "../"
+      dockerfile: ./development-env/metasploit-framework/Dockerfile
+    platform: linux/amd64
+    environment:
+      - BUNDLE_PATH=/bundle/vendor
+    volumes:
+    - metasploit-framework:/metasploit-framework
+    - bundle_path:/bundle
+volumes:
+  metasploit-framework:
+  bundle_path:
+x-mutagen:
+  sync:
+    defaults:
+      probeMode: assume
+      ignore:
+        vcs: true
+      mode: two-way-resolved
+      stageMode: neighboring
+    metasploit-framework:
+      alpha: "../metasploit-framework"
+      beta: volume://metasploit-framework
