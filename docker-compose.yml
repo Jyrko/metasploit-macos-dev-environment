@@ -9,6 +9,17 @@ services:
     volumes:
     - metasploit-framework:/metasploit-framework
     - bundle_path:/bundle
+    depends_on:
+    - postgres
+    command: |
+      sh -c "bundle install"
+  postgres:
+    image: postgres:16
+    ports:
+      - "127.0.0.1:5433:5432"
+    environment:
+      - POSTGRES_PASSWORD=mysecretpassword
+
 volumes:
   metasploit-framework:
   bundle_path:

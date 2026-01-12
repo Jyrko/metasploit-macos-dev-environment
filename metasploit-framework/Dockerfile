@@ -23,4 +23,6 @@ RUN ruby -v
 
 WORKDIR /metasploit-framework
 
+# RUN ./msfdb init --connection-string="postgres://postgres:mysecretpassword@postgres:5432/postgres"
 
+# RUN ./msfconsole -qx "db_status; exit"
